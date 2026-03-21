@@ -14,7 +14,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
+    public Vector3 GetMoveDirection()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
 
+        return new Vector3(h, 0f, v).normalized;
+    }
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
