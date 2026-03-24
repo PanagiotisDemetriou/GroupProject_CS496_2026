@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class SmokeButtonInteract : MonoBehaviour
 {
     [Header("References")]
@@ -11,6 +11,7 @@ public class SmokeButtonInteract : MonoBehaviour
     [SerializeField] private float smokeOnDuration = 10f;
     [SerializeField] private float cooldownDuration = 60f;
     [SerializeField] private Collider smokeBlocker;
+    [SerializeField] private NavMeshObstacle smokeObstacle;
     private bool playerInRange = false;
     private bool isOnCooldown = false;
 
@@ -24,6 +25,8 @@ public class SmokeButtonInteract : MonoBehaviour
             interactPrompt.SetActive(false);
         if (smokeBlocker != null)
             smokeBlocker.enabled = false;
+        if (smokeObstacle != null)
+            smokeObstacle.enabled = false;
     }
 
     private void Update()
@@ -50,6 +53,8 @@ public class SmokeButtonInteract : MonoBehaviour
         // Enable blocking
         if (smokeBlocker != null)
             smokeBlocker.enabled = true;
+        if (smokeObstacle != null)
+            smokeObstacle.enabled = true;
 
         Debug.Log("Smoke ON for 10 seconds.");
 
@@ -62,6 +67,8 @@ public class SmokeButtonInteract : MonoBehaviour
         // Disable blocking
         if (smokeBlocker != null)
             smokeBlocker.enabled = false;
+        if (smokeObstacle != null)
+            smokeObstacle.enabled = false;
         Debug.Log("Smoke OFF. Cooldown started.");
 
         // Cooldown
