@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: orange-suit-worker
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
+      propertyPath: m_TagString
+      value: Unit
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
       propertyPath: m_Controller
       value: 
