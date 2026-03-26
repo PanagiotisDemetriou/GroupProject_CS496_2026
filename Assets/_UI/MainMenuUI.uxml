@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=698b9196c2c82a640b57019993e812c2&amp;type=3#MainMenuStyle"/>
+    <ui:VisualElement name="MainMenuPanel" class="full-screen menu-panel" style="flex-grow: 1;">
+        <ui:Label text="THE BOSS GREAT ESCAPE" name="GameTitle" parse-escape-sequences="false" class="menu-title"/>
+        <ui:Button text="START" name="StartButton" class="menu-button"/>
+        <ui:Button text="CONTROLS INFO" name="ControlsButton" class="menu-button"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="ControlsPanel" class="full-screen controls-panel hidden" style="flex-grow: 1; display: none;">
+        <ui:Button text="BACK" name="BackButton" class="back-button"/>
+        <ui:Label text="CONTROLS" name="ControlsTitle" class="controls-title"/>
+        <ui:Label text="W  -  Move Forward&#10;&#10;S  -  Move Backward&#10;&#10;A  -  Move Left&#10;&#10;D  -  Move Right" name="ControlsText" class="controls-text"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,32 @@
+#TopRightPanel {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    align-items: flex-end;
+}
+
+.small-box {
+    background-color: rgba(45, 45, 45, 0.92);
+    color: rgb(255, 255, 255);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 4px;
+    unity-text-align: middle-right;
+    font-size: 11px;
+    -unity-font-style: bold;
+}
+
+.time-box {
+    background-color: rgba(45, 45, 45, 0.92);
+    color: rgb(255, 255, 255);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 14px;
+    unity-text-align: middle-right;
+    font-size: 16px;
+    -unity-font-style: bold;
+}
