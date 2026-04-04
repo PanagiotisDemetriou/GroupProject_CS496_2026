@@ -3,86 +3,99 @@ using UnityEngine.UIElements;
 
 public class HUDTimer : MonoBehaviour
 {
-    public UIDocument uiDocument;
+    [SerializeField] private UIDocument gameHudDocument;
 
     private Label timerLabel;
     private Label bestLabel;
 
-    private float currentTime = 0f;
+    private float elapsedTime = 0f;
     private float bestTime = 0f;
 
-    private bool isNewRecord = false;
-    private bool gameRunning = false;   // <- σημαντικό: ξεκινά κλειστό
+    private bool timerRunning = false;
 
-    void Start()
+    private const string BestTimeKey = "BestTime";
+
+    private void Awake()
     {
-        var root = uiDocument.rootVisualElement;
+        if (gameHudDocument == null)
+            gameHudDocument = GetComponent<UIDocument>();
+    }
+
+    private void OnEnable()
+    {
+        if (gameHudDocument == null)
+            return;
+
+        VisualElement root = gameHudDocument.rootVisualElement;
 
         timerLabel = root.Q<Label>("TimerLabel");
         bestLabel = root.Q<Label>("BestLabel");
 
-        bestTime = PlayerPrefs.GetFloat("BestTime", 0f);
+        bestTime = PlayerPrefs.GetFloat(BestTimeKey, 0f);
 
-        UpdateUI();
+        UpdateTimerLabel(0f);
+        UpdateBestLabelDisplay();
     }
 
-    void Update()
+    private void Update()
     {
-        if (!gameRunning) return;
+        if (!timerRunning)
+            return;
 
-        currentTime += Time.deltaTime;
+        elapsedTime += Time.deltaTime;
 
-        if (currentTime > bestTime)
-        {
-            isNewRecord = true;
-        }
-
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        if (timerLabel != null)
-            timerLabel.text = FormatTime(currentTime);
-
-        if (bestLabel != null)
-        {
-            if (isNewRecord)
-                bestLabel.text = FormatTime(currentTime);
-            else
-                bestLabel.text = FormatTime(bestTime);
-        }
+        UpdateTimerLabel(elapsedTime);
+        UpdateBestLabelDisplay();
     }
 
     public void StartTimer()
     {
-        gameRunning = true;
+        elapsedTime = 0f;
+        timerRunning = true;
+
+        bestTime = PlayerPrefs.GetFloat(BestTimeKey, 0f);
+
+        UpdateTimerLabel(0f);
+        UpdateBestLabelDisplay();
     }
 
     public void StopTimer()
     {
-        gameRunning = false;
+        timerRunning = false;
+    }
 
-        if (currentTime > bestTime)
+    public void SaveBestIfNeeded()
+    {
+        if (elapsedTime > bestTime)
         {
-            PlayerPrefs.SetFloat("BestTime", currentTime);
+            bestTime = elapsedTime;
+            PlayerPrefs.SetFloat(BestTimeKey, bestTime);
             PlayerPrefs.Save();
         }
     }
 
-    public void ResetTimer()
+    private void UpdateTimerLabel(float timeValue)
     {
-        currentTime = 0f;
-        isNewRecord = false;
-        gameRunning = false;
-        bestTime = PlayerPrefs.GetFloat("BestTime", 0f);
-        UpdateUI();
+        if (timerLabel != null)
+            timerLabel.text = FormatTime(timeValue);
     }
 
-    string FormatTime(float time)
+    private void UpdateBestLabelDisplay()
     {
-        int minutes = Mathf.FloorToInt(time / 60f);
-        int seconds = Mathf.FloorToInt(time % 60f);
-        return string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (bestLabel == null)
+            return;
+
+        if (elapsedTime >= bestTime)
+            bestLabel.text = FormatTime(elapsedTime);
+        else
+            bestLabel.text = FormatTime(bestTime);
+    }
+
+    private string FormatTime(float timeValue)
+    {
+        int minutes = Mathf.FloorToInt(timeValue / 60f);
+        int seconds = Mathf.FloorToInt(timeValue % 60f);
+
+        return $"{minutes:00}:{seconds:00}";
     }
 }

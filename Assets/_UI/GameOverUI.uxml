@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/GameOverStyle.uss?fileID=7433441132597879392&amp;guid=4a94998325edd9543a63c2dcf0f21a8d&amp;type=3#GameOverStyle"/>
+    <Style src="project://database/Assets/_UI/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=698b9196c2c82a640b57019993e812c2&amp;type=3#MainMenuStyle"/>
+    <ui:VisualElement name="GameOverOverlay" style="flex-grow: 1;">
+        <ui:VisualElement name="GameOverPanel" style="flex-grow: 1;">
+            <ui:Label text="GAME OVER" name="GameOverTitle"/>
+            <ui:Button text="Restart" name="RestartButton" class="menu-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

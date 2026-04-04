@@ -64,7 +64,6 @@ public class PauseMenuController : MonoBehaviour
             backButton.clicked += ShowMainPausePanel;
 
         root.style.display = DisplayStyle.None;
-        //root.style.display = DisplayStyle.Flex;
 
         if (pausePanel != null)
             pausePanel.style.display = DisplayStyle.Flex;

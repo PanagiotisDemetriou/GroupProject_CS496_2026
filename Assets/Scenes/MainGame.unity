@@ -1411,8 +1411,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8627652561745509676, guid: 0f771584663797402be1e6b00c5d2676, type: 3}
   m_PrefabInstance: {fileID: 689120239605582246}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &77959217
-MeshCollider:
+--- !u!136 &77959222
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1429,10 +1429,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &82131792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006f5ce87e150ab41b43174b01a0e9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HUDTimer
-  uiDocument: {fileID: 82131794}
+  gameHudDocument: {fileID: 0}
 --- !u!114 &82131794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3270,6 +3271,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010030195824, guid: edb53a232d99f4148bea36b9308e520e, type: 3}
   m_PrefabInstance: {fileID: 269166843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &270683573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270683575}
+  - component: {fileID: 270683574}
+  - component: {fileID: 270683576}
+  m_Layer: 0
+  m_Name: GameOverUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &270683574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270683573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 87f4cbd76c6bf9b4f85e495a727bcde6, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: db2a542dc488b274d83f69472393a537, type: 3}
+  m_SortingOrder: 200
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &270683575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270683573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5596, y: 0.6408, z: 1.34526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270683576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270683573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e977f57fdae69a84b8a2e1fcebe5af8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverController
+  gameOverDocument: {fileID: 270683574}
+  gameHudDocument: {fileID: 82131794}
+  pauseMenuDocument: {fileID: 646584563}
+  hudTimer: {fileID: 82131793}
 --- !u!1001 &278675553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6058,8 +6131,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1373017435446421085, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
   m_PrefabInstance: {fileID: 8185076192096228119}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &453267658
-MeshCollider:
+--- !u!136 &453267663
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6076,10 +6149,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &453948344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17547,6 +17621,48 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1404053002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34648679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4e260049320b9479dbd0f9f79cf1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossGameOverTrigger
+  gameOverController: {fileID: 270683576}
+  workerTag: Worker
+  gameOverDistance: 1.85
+--- !u!54 &1404053003
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34648679}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1407232142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24265,8 +24381,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1873779776351967224, guid: f0efdc4bcaf81a0d7bcb7add5dfd678d, type: 3}
   m_PrefabInstance: {fileID: 5610573294865244892}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1892282862
-MeshCollider:
+--- !u!136 &1892282867
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24283,10 +24399,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1898225006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28138,6 +28255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: worker
       objectReference: {fileID: 0}
+    - target: {fileID: 8627652561745509676, guid: 0f771584663797402be1e6b00c5d2676, type: 3}
+      propertyPath: m_TagString
+      value: Worker
+      objectReference: {fileID: 0}
     - target: {fileID: 9002771417110161302, guid: 0f771584663797402be1e6b00c5d2676, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.74
@@ -28184,7 +28305,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8627652561745509676, guid: 0f771584663797402be1e6b00c5d2676, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 77959217}
+      addedObject: {fileID: 77959222}
   m_SourcePrefab: {fileID: 100100000, guid: 0f771584663797402be1e6b00c5d2676, type: 3}
 --- !u!1001 &5610573294865244892
 PrefabInstance:
@@ -28238,6 +28359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: orange-suit-worker
       objectReference: {fileID: 0}
+    - target: {fileID: 1873779776351967224, guid: f0efdc4bcaf81a0d7bcb7add5dfd678d, type: 3}
+      propertyPath: m_TagString
+      value: Worker
+      objectReference: {fileID: 0}
     - target: {fileID: 5660028026941115690, guid: f0efdc4bcaf81a0d7bcb7add5dfd678d, type: 3}
       propertyPath: target
       value: 
@@ -28248,7 +28373,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1873779776351967224, guid: f0efdc4bcaf81a0d7bcb7add5dfd678d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1892282862}
+      addedObject: {fileID: 1892282867}
   m_SourcePrefab: {fileID: 100100000, guid: f0efdc4bcaf81a0d7bcb7add5dfd678d, type: 3}
 --- !u!1001 &8185076192096228119
 PrefabInstance:
@@ -28261,6 +28386,10 @@ PrefabInstance:
     - target: {fileID: 1373017435446421085, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
       propertyPath: m_Name
       value: builder-worker-adam
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373017435446421085, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
+      propertyPath: m_TagString
+      value: Worker
       objectReference: {fileID: 0}
     - target: {fileID: 1749121486981168359, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28312,7 +28441,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1373017435446421085, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 453267658}
+      addedObject: {fileID: 453267663}
   m_SourcePrefab: {fileID: 100100000, guid: aa9f69b9d34f1a773a44b0df8e06599f, type: 3}
 --- !u!1001 &8985139504138874909
 PrefabInstance:
@@ -28365,6 +28494,10 @@ PrefabInstance:
     - target: {fileID: 8122507281322291594, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122507281322291594, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8417875754306894047, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
       propertyPath: m_Name
@@ -28428,6 +28561,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8417875754306894047, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1404052998}
+    - targetCorrespondingSourceObject: {fileID: 8417875754306894047, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1404053002}
+    - targetCorrespondingSourceObject: {fileID: 8417875754306894047, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1404053003}
   m_SourcePrefab: {fileID: 100100000, guid: 0959cb4e2458ab04cbc3e177bbe7fb5d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -28525,3 +28664,4 @@ SceneRoots:
   - {fileID: 217804956}
   - {fileID: 887532090}
   - {fileID: 646584564}
+  - {fileID: 270683575}

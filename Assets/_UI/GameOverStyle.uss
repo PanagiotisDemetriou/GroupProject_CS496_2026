@@ -1,0 +1,44 @@
+#GameOverOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+#GameOverPanel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#GameOverTitle {
+    color: rgb(220, 40, 40);
+    font-size: 52px;
+    -unity-font-style: bold-and-italic;
+    unity-text-align: middle-center;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+
+    text-shadow:
+        -2px -2px 0 rgb(90, 0, 0),
+         2px -2px 0 rgb(90, 0, 0),
+        -2px  2px 0 rgb(90, 0, 0),
+         2px  2px 0 rgb(90, 0, 0);
+}
+
+#RestartButton {
+    width: 300px;
+    height: 64px;
+    margin-top: 16px;
+}
