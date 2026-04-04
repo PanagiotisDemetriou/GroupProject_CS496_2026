@@ -8,6 +8,6 @@
     <ui:VisualElement name="ControlsPanel" class="full-screen controls-panel hidden" style="flex-grow: 1; display: none;">
         <ui:Button text="BACK" name="BackButton" class="back-button"/>
         <ui:Label text="CONTROLS" name="ControlsTitle" class="controls-title"/>
-        <ui:Label text="W  -  Move Forward&#10;&#10;S  -  Move Backward&#10;&#10;A  -  Move Left&#10;&#10;D  -  Move Right" name="ControlsText" class="controls-text"/>
+        <ui:Label text="W  -  Move Forward&#10;&#10;S  -  Move Backward&#10;&#10;A  -  Move Left&#10;&#10;D  -  Move Right&#10;&#10;E  -  Activate Traps&#10;&#10;SHIFT  -  Accelerate&#10;&#10;ESC  -  Pause" name="ControlsText" class="controls-text"/>
     </ui:VisualElement>
 </ui:UXML>

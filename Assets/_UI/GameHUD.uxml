@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ui="UnityEngine.UIElements"
-    xmlns:uie="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/GameHUDStyle.uss?fileID=7433441132597879392&amp;guid=8a1c31e4a4eb43e4b84b66b77149b8b0&amp;type=3#GameHUDStyle"/>
+    <ui:VisualElement name="TopRightPanel" style="flex-grow: 1;">
+        <ui:Label text="SURVIVAL TIME" name="SurvivalTitle" class="small-box"/>
+        <ui:Label text="00:00" name="TimerLabel" class="time-box"/>
+        <ui:Label text="BEST" name="BestTitle" class="small-box"/>
+        <ui:Label text="00:00" name="BestLabel" class="time-box"/>
+    </ui:VisualElement>
 </ui:UXML>

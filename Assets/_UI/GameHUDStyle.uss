@@ -1,32 +1,69 @@
 #TopRightPanel {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 14px;
+    right: 14px;
+
     align-items: flex-end;
 }
 
 .small-box {
-    background-color: rgba(45, 45, 45, 0.92);
+    background-color: rgba(170, 220, 255, 0.22);
     color: rgb(255, 255, 255);
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 7px;
-    padding-right: 7px;
-    margin-bottom: 4px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 5px;
+
     unity-text-align: middle-right;
-    font-size: 11px;
+    font-size: 10px;
     -unity-font-style: bold;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+
+    border-top-color: rgba(235, 248, 255, 0.9);
+    border-left-color: rgba(220, 240, 255, 0.82);
+    border-right-color: rgba(120, 175, 220, 0.75);
+    border-bottom-color: rgba(95, 155, 205, 0.78);
 }
 
 .time-box {
-    background-color: rgba(45, 45, 45, 0.92);
+    background-color: rgba(140, 205, 255, 0.28);
     color: rgb(255, 255, 255);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 9px;
-    padding-right: 9px;
-    margin-bottom: 14px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    margin-bottom: 12px;
+
     unity-text-align: middle-right;
-    font-size: 16px;
+    font-size: 15px;
     -unity-font-style: bold;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+
+    border-top-color: rgba(235, 248, 255, 0.98);
+    border-left-color: rgba(215, 238, 255, 0.9);
+    border-right-color: rgba(105, 165, 215, 0.82);
+    border-bottom-color: rgba(80, 145, 200, 0.88);
 }

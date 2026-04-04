@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
+
 public class MainMenuController : MonoBehaviour
 {
     public UIDocument menuDocument;
     public UIDocument gameHudDocument;
     public HUDTimer hudTimer;
+    [SerializeField] private PauseMenuController pauseMenuController;
 
     private VisualElement mainMenuPanel;
     private VisualElement controlsPanel;
@@ -77,6 +80,9 @@ public class MainMenuController : MonoBehaviour
         if (hudTimer != null)
             hudTimer.StartTimer();
 
+        if (pauseMenuController != null)
+            pauseMenuController.SetGameStarted(true);
+            
         Time.timeScale = 1f;
     }
 
