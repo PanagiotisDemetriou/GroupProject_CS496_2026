@@ -11,7 +11,7 @@ public class AlarmController : MonoBehaviour
     [SerializeField] private AudioSource sirenAudioSource;
 
     [Header("Agents")]
-    [SerializeField] private string agentTag = "Unit";
+    [SerializeField] private string agentTag = "Worker";
 
     public bool IsAlarmActive { get; private set; }
     public Transform AlarmPoint => alarmPoint;

@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
       propertyPath: m_TagString
-      value: Unit
+      value: Worker
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
       propertyPath: m_Controller
@@ -86,6 +86,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5660028026941115690}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2488848196870889270}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9064024388277963899}
   m_SourcePrefab: {fileID: 100100000, guid: 3ceffa605e0bb007e959767e51380066, type: 3}
 --- !u!1 &1873779776351967224 stripped
 GameObject:
@@ -127,3 +133,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveToBoss
   target: {fileID: 0}
+--- !u!136 &2488848196870889270
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873779776351967224}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &9064024388277963899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873779776351967224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1705edc873124083b93669b423608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorkerRegister
