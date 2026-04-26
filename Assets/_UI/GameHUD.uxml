@@ -6,4 +6,7 @@
         <ui:Label text="BEST" name="BestTitle" class="small-box"/>
         <ui:Label text="00:00" name="BestLabel" class="time-box"/>
     </ui:VisualElement>
+    <ui:VisualElement name="StaminaBarContainer" style="flex-grow: 1;">
+        <ui:VisualElement name="StaminaBarFill" style="flex-grow: 1;"/>
+    </ui:VisualElement>
 </ui:UXML>

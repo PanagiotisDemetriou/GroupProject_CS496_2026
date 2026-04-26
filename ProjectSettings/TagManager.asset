@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Unit
   - Worker
+  - Collectible
+  - Spawner
   layers:
   - Default
   - TransparentFX

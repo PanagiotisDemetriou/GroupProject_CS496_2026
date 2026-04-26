@@ -350,6 +350,7 @@ MonoBehaviour:
   smokeOnDuration: 10
   cooldownDuration: 60
   smokeBlocker: {fileID: 275503121546169801}
+  smokeObstacle: {fileID: 0}
 --- !u!1 &3464036857575685319
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4017877472911753090}
   - component: {fileID: 275503121546169801}
+  - component: {fileID: 2529134936603894075}
   m_Layer: 0
   m_Name: SmokeBlock
   m_TagString: Untagged
@@ -515,6 +517,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &2529134936603894075
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8798700439050839837}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &618556498907572377
 PrefabInstance:
   m_ObjectHideFlags: 0

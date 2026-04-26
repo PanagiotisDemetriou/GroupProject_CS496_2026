@@ -38,16 +38,16 @@ public class AlarmButtonInteract : MonoBehaviour
         if (interactPrompt != null)
             interactPrompt.SetActive(false);
 
-        // 🔴 ACTIVATE ALARM
+        
         if (alarmController != null)
             alarmController.ActivateAlarm();
 
         Debug.Log("Alarm ACTIVATED.");
 
-        // Alarm stays active
+        
         yield return new WaitForSeconds(alarmDuration);
 
-        // 🔵 DEACTIVATE ALARM
+        
         if (alarmController != null)
             alarmController.DeactivateAlarm();
 
